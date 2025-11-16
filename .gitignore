@@ -1,0 +1,8 @@
+test_2d_keypoints
+train_2d_keypoints
+how2sign_realigned_test.csv
+how2sign_realigned_train.csv
+how2sign_realigned_val.csv
+move_json_folders.py
+keypoints
+myenv
