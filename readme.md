@@ -121,7 +121,7 @@ Open the provided URL in your browser to access the interface.
 
 -----
 
-## 💾 Building the Pose Database
+##  Building the Pose Database
 
 The `gloss_pose_library_testval.pkl` file is created using the `building_database.py` script. This process requires the raw **How2Sign** dataset files.
 
