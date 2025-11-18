@@ -13,7 +13,7 @@ The primary objective of this project is to develop a sophisticated **Artificial
 
 -----
 
-## 🏗️ Architecture and Pipeline
+##  Architecture and Pipeline
 
 This project is built around a multi-stage pipeline that converts natural language input into a visual sign animation:
 
@@ -26,7 +26,7 @@ This project is built around a multi-stage pipeline that converts natural langua
 
 -----
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 .
@@ -39,7 +39,7 @@ This project is built around a multi-stage pipeline that converts natural langua
 
 -----
 
-## 🚀 Setup and Installation
+##  Setup and Installation
 
 ### Prerequisites
 
@@ -83,7 +83,7 @@ These files must be placed in their respective locations as defined in the code.
 
 -----
 
-## 💡 Usage
+##  Usage
 
 ### Option 1: Command-Line Interface (CLI)
 

@@ -35,11 +35,11 @@ MODEL_DIR = "best_model"
 # -----------------------------
 # Load Text → Gloss Model
 # -----------------------------
-print("📥 Loading Text→Gloss model from", MODEL_DIR)
+print("Loading Text→Gloss model from", MODEL_DIR)
 tokenizer = AutoTokenizer.from_pretrained(MODEL_DIR)
 model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_DIR)
 model.eval()
-print("✅ Model and tokenizer loaded successfully.")
+print("Model and tokenizer loaded successfully.")
 
 
 # -----------------------------
@@ -48,7 +48,7 @@ print("✅ Model and tokenizer loaded successfully.")
 with open(DB_PATH, "rb") as f:
     gloss_db = pickle.load(f)
 
-print(f"📁 Loaded database with {len(gloss_db)} glosses.")
+print(f"Loaded database with {len(gloss_db)} glosses.")
 
 
 # -----------------------------
@@ -85,8 +85,8 @@ def text_to_gloss(text: str):
     cleaned = [g.replace("-", "").replace("?", "").upper() for g in glosses]
 
     gloss_seq = [g for g in cleaned if g in gloss_db]
-    print(f"🧾 Predicted glosses: {glosses}")
-    print(f"📌 Valid in DB: {gloss_seq}")
+    print(f"Predicted glosses: {glosses}")
+    print(f"Valid in DB: {gloss_seq}")
     return gloss_seq
 
 
@@ -130,7 +130,7 @@ def animate_sequence(gloss_sequence):
             frames.append(pose)
             valids.append(valid)
 
-    print(f"📌 Total frames loaded: {len(frames)}")
+    print(f"Total frames loaded: {len(frames)}")
     return frames, valids
 
 
@@ -172,7 +172,7 @@ def add_transitions(frames, valids, gloss_seq, interp_steps=8):
 # -----------------------------
 def speech_to_text(audio_path):
     """Transcribe speech from an audio file using local Whisper."""
-    print(f"🎧 Transcribing audio: {audio_path}")
+    print(f"Transcribing audio: {audio_path}")
 
     # Ensure format is readable by Whisper
     try:
@@ -181,7 +181,7 @@ def speech_to_text(audio_path):
         print(f"🎙️ Transcribed Speech: {text}")
         return text
     except Exception as e:
-        print("❌ Whisper transcription failed:", e)
+        print("Whisper transcription failed:", e)
         return ""
 
 
@@ -231,7 +231,7 @@ elif args.audio:
 else:
     raise ValueError("No input provided. Use --text or --audio.")
 
-print("📝 Input sentence:", sentence)
+print("Input sentence:", sentence)
 
 
 # -----------------------------
@@ -241,6 +241,6 @@ gloss_seq = text_to_gloss(sentence)
 poses, valid_masks = animate_sequence(gloss_seq)
 poses, valid_masks = add_transitions(poses, valid_masks, gloss_seq, interp_steps=INTERP_STEPS)
 
-print("💾 Saving animation...")
+print("Saving animation...")
 save_animation(poses, valid_masks, gloss_seq, "sign_output.mp4")
 print(" Video saved successfully.")
