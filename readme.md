@@ -42,7 +42,7 @@ This project is built around a multi-stage pipeline that converts natural langua
 
 Below is a snapshot of the generated sign language animation, illustrating the real-time skeletal rendering of the translated gloss sequence.
 
-![Example of Sign Language Animation Rendering](Figure1.png)
+![Example of Sign Language Animation Rendering](Figure_1.png)
 
 ---
 ##  Setup and Installation
