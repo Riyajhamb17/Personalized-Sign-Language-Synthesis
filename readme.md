@@ -19,7 +19,7 @@ This project is built around a multi-stage pipeline that converts natural langua
 
 1.  **Input:** Accepts plain **Text** (`--text`) or **Audio** (`--audio` / Streamlit mic/upload).
 2.  **Speech-to-Text (STT):** Uses the **Whisper** model for audio transcription (in `retriever_frontend.py`).
-3.  **Text-to-Gloss:** A **HuggingFace Seq2Seq Transformer Model** converts the transcribed text into a sequence of sign language glosses (e.g., "HELLO HOW ARE YOU").
+3.  **Text-to-Gloss:** A **Seq2Seq Transformer Model** converts the transcribed text into a sequence of sign language glosses (e.g., "HELLO HOW ARE YOU").
 4.  **Gloss Retrieval:** The system retrieves corresponding pose sequences from a pre-built **Gloss-Pose Library** (`gloss_pose_library_testval.pkl`).
 5.  **Interpolation & Smoothing:** Transitions between different sign poses are smoothed using **linear interpolation** for fluid movement.
 6.  **Video Synthesis:** **Matplotlib** is used with `FuncAnimation` and `FFMpegWriter` to render the 2D keypoint sequences into a final `.mp4` sign animation video.
