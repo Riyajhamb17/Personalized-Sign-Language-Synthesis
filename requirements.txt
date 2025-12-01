@@ -1,12 +1,9 @@
-streamlit==1.40.1
-speechrecognition==3.10.0
+streamlit
+SpeechRecognition
 git+https://github.com/openai/whisper.git
-transformers==4.45.0
-torch==2.2.0
+transformers
+torch
+matplotlib
 numpy==1.26.4
-matplotlib==3.9.2
-opencv-python-headless==4.10.0.84
-imageio==2.35.1
-moviepy==1.0.3
 
 
