@@ -1,9 +1,9 @@
+numpy==1.26.4
 streamlit
 SpeechRecognition
 git+https://github.com/openai/whisper.git
 transformers
 torch
 matplotlib
-numpy==1.26.4
 
 
