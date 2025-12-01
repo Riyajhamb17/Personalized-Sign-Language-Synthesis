@@ -1,6 +1,6 @@
 streamlit
 speechrecognition
-whisper
+openai-whisper
 transformers
 torch
 matplotlib
